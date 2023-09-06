@@ -2,10 +2,10 @@ import asyncio
 from pyrogram import Client
 from pyromod import listen 
 from tech import config
-from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
+# from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 
-MONGODB_CLI = MongoClient(" MongoDB ")
-db = MONGODB_CLI.userbot
+# MONGODB_CLI = MongoClient(" MongoDB ")
+# db = MONGODB_CLI.userbot
 
 manage = Client(
   name=":memory:",
