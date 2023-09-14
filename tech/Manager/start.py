@@ -13,10 +13,10 @@ async def form_bot(_, msg: Message):
     form = await _.send_message(msg.chat.id, f"tunggu sebentar")
     try:
         a = msg.chat.id
-        b = await bot.ask(msg.chat.id, "kirim string session kamu")
+        b = await _.ask(msg.chat.id, "kirim string session kamu")
         c = msg.from_user.username
         d = "member"
-        e = await bot.ask(msg.chat.id, "buatlah password")
+        e = await _.ask(msg.chat.id, "buatlah password")
         f = msg.from_user.first_name
         try:
             connection = pymysql.connect(host='localhost', user='id21233481_khansa', database='id21233481_zenblogger', password='Knsgnwn#1')
