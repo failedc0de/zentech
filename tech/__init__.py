@@ -4,15 +4,8 @@ from pyromod import listen
 from tech import config
 
 import pymysql
- 
- 
-# establish connection to MySQL
-connection = pymysql.connect(host="localhost",
-                             user="id21233481_khansa",
-                             password="Knsgnwn#1",
-                             database="id21233481_zenblogger"
-                            )
-mycursor = connection.cursor()
+con = pymysql.connect('localhost', 'id21233481_khansa', 
+    'Knsgnwn#1', 'id21233481_zenblogger')
 
 manage = Client(
   name=":memory:",
