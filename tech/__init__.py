@@ -17,33 +17,6 @@ connection = pymysql.connect(
  
 # make cursor for establish connection
 mycursor = connection.cursor()
-mycursor.execute("Select * from geeksdemo")
-myresult = mycursor.fetchall()
-for i in myresult:
-    print(i)
-     
-     
-# statement to insert record
-mycursor.execute(
-    "Insert into geeksdemo(id,name,gender,dept) \
-    select * from( Select 5,'Thomas','m','information technology') as temp \
-    where not exists \
-    (Select id from geeksdemo where id=5) LIMIT 1")
-print("After inserting a record....")
- 
- 
-# print records after insertion
-mycursor.execute("Select * from geeksdemo")
- 
- 
-myresult = mycursor.fetchall()
-for i in myresult:
-    print(i)
-mycursor.execute("Commit")
- 
- 
-# close connection
-connection.close()
 manage = Client(
   name=":memory:",
   api_id=config.API_ID,
