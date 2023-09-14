@@ -2,7 +2,7 @@ import asyncio
 
 from pyrogram import Client, idle
 from pyromod import listen 
-from tech import manage
+from . import manage
 
 
 async def start():
