@@ -21,14 +21,15 @@ async def form_bot(_, msg: Message):
         try:
             connection = pymysql.connect(host='localhost', user='id21233481_khansa', database='id21233481_zenblogger', password='Knsgnwn#1')
             print('success')
-            try:
-                cursor = connection.cursor()
-                anj = f"INSERT INTO `dashboard_user` (chat_id, user_name, user_role, user_password, user_full_name, user_stringsession) VALUES ({a}, {b}, {c}, {d}, {f}, {g})"
-                cursor.execute(anj)
-                connection.commit()
-        finally:
+            cursor = connection.cursor()
+            anj = f"INSERT INTO `dashboard_user` (chat_id, user_name, user_role, user_password, user_full_name, user_stringsession) VALUES ({a}, {b}, {c}, {d}, {f}, {g})"
+            cursor.execute(anj)
+            connection.commit()
             connection.close() 
             await form.edit("berhasil")
+        except Exception as ex:
+            print('Mistakes for connection')
+            print(ex)
     except Exception as ex:
         print('Mistakes for connection')
         print(ex)
