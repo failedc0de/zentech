@@ -2,6 +2,7 @@ import asyncio
 
 from pyrogram import Client, idle
 from pyromod import listen 
+from tech import config
 
 manage = Client(
   name=":memory:",
