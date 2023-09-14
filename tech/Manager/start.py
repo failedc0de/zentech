@@ -10,7 +10,7 @@ async def start_bot(_, msg: Message):
 @Client.on_message(filters.private & filters.command("form"))
 async def form_bot(_, msg: Message):
     try:
-        cek = await msg.ask("kirim string")
+        cek = await _.ask(msg.chat.id, "kirim string")
         await _.send_message(msg.chat.id, f"string kamu\n{cek}")
     except Exception as ex:
         print('Mistakes for connection')
