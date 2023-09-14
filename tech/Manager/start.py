@@ -11,7 +11,7 @@ async def start_bot(_, ctx: Message):
 async def form_bot(_, ctx: Message):
     try:
         cek = await ctx.chat.ask("Type your string session")
-        await _.send_message(ctx.chat.id, f"string kamu\n{cek.teks}")
+        await _.send_message(ctx.chat.id, f"string kamu\n{cek.text}")
     except Exception as ex:
         print('Mistakes for connection')
         print(ex)
