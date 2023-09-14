@@ -1,7 +1,7 @@
 import asyncio
 
 from pyrogram import Client, idle
-from pyromod import listen 
+from Abg import patch
 from tech import config
 from tech import manage
 
