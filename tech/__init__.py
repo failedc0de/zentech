@@ -7,16 +7,13 @@ import pymysql
  
  
 # establish connection to MySQL
-connection = pymysql.connect(
-    host="localhost",
-    user="id21233481_khansa",
-    password="Knsgnwn#1",
-    port=3306,
-    db="id21233481_zenblogger"
-)
- 
-# make cursor for establish connection
+connection = pymysql.connect(host="localhost",
+                             user="id21233481_khansa",
+                             password="Knsgnwn#1",
+                             database="id21233481_zenblogger"
+                            )
 mycursor = connection.cursor()
+
 manage = Client(
   name=":memory:",
   api_id=config.API_ID,
