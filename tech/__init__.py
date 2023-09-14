@@ -1,6 +1,6 @@
 import asyncio
 from pyrogram import Client
-from pyromod import listen 
+from Abg import patch
 from tech import config
 
 manage = Client(
