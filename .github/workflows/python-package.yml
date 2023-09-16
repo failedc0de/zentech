@@ -24,7 +24,8 @@ jobs:
     - name: Install requirements
       run: |
         pip3 install -U -r requirements.txt
-        pip3 install cachetools
+        pip3 uninstall ABG
+        pip3 install Abg==2.3.6
     - name: run
       run: |
         python3 -m tech
