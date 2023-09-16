@@ -23,7 +23,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install requirements
       run: |
-        python -m pip3 install --upgrade pip
+        apt-get update && apt-get upgrade -y
+        apt install python3-pip
         pip3 install -U pip
         pip3 install -U -r requirements.txt
     - name: run
