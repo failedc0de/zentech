@@ -1,7 +1,7 @@
 from pyrogram import Client, idle, filters
 from pyrogram.types import Message
 from tech import manage as app
-
+from tech.Database.test import get_authuser_names, save_authuser, delete_authuser, extract_user
 
 @Client.on_message(filters.private & filters.command("start"))
 async def start_bot(_, ctx: Message):
