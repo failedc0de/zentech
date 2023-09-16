@@ -24,7 +24,7 @@ async def int_to_alpha(user_id: int) -> str:
         text += alphabet[int(i)]
     return text
     
-@Client.on_message(filters.command("auth") & filters.group & filters.private)
+@Client.on_message(filters.command("auth") & filters.group)
 async def auth(client: Client, message: Message, _):
     chat_id = message.chat.id
     userid = await extract_user(message)
@@ -34,7 +34,7 @@ async def auth(client: Client, message: Message, _):
         user = message.text.split(None, 1)[1]
         if "@" in user:
             user = user.replace("@", "")
-        user = await app.get_users(user)
+        user = await _.get_users(user)
         user_id = message.from_user.id
         token = await int_to_alpha(user.id)
         from_user_name = message.from_user.first_name
