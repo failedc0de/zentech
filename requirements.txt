@@ -4,6 +4,7 @@ python-dotenv
 uvloop
 TgCrypto
 motor
+ABG
 requests
 aiohttp
 aiofiles
