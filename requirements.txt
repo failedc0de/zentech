@@ -4,7 +4,7 @@ python-dotenv
 uvloop
 TgCrypto
 motor
-Abg==2.3.5
+Abg==2.3.1
 cachetools
 requests
 aiohttp
